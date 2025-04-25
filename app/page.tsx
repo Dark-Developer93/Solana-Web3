@@ -1,14 +1,14 @@
 'use client';
 
-import { useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { useMemo } from 'react';
 
 import { AnimatedContainer } from '@/components/AnimatedContainer';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import SolanaTransfer from '@/components/transfer/SolanaTransfer';
 import { TransferProvider } from '@/contexts/TransferContext';
 
-export const Home = () => {
+export default function Home() {
   const containerVariants = useMemo(
     () => ({
       hidden: { opacity: 0 },
@@ -55,6 +55,4 @@ export const Home = () => {
       </footer>
     </div>
   );
-};
-
-export default Home;
+}
