@@ -74,6 +74,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - framer-motion
 - sonner
 - react-hook-form
+- React Query
 - zod
 - next-themes
 - TypeScript
@@ -86,5 +87,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [Shadcn UI](https://ui.shadcn.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [React Hook Form](https://react-hook-form.com/)
+- [React Query](https://tanstack.com/query/latest/docs/framework/react/guides/queries)
 - [Zod](https://zod.dev/)
 - [Next Themes](https://github.com/pacocoursey/next-themes)
