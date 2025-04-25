@@ -38,8 +38,7 @@ export const TransferForm: React.FC = () => {
       amount: '',
     },
     mode: 'onChange',
-    // @ts-expect-error - Type instantiation is excessively deep and possibly infinite with the dynamic schema creation
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema as any),
   });
 
   React.useEffect(() => {
