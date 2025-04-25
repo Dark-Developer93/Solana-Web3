@@ -38,7 +38,7 @@ export const TransferForm: React.FC = () => {
       amount: '',
     },
     mode: 'onChange',
-    // @ts-expect-error zodResolver is failing to resolve the form schema when it's deep nested
+    // @ts-expect-error - Type instantiation is excessively deep and possibly infinite with the dynamic schema creation
     resolver: zodResolver(formSchema),
   });
 
