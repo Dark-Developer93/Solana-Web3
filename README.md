@@ -1,48 +1,90 @@
 # AlphaNeural Frontend Challenge
 
-Welcome to the AlphaNeural Frontend Task!  
-Your objective is to build a simple Next.js application that allows users to **connect their Solana wallet** and **transfer SOL** to another address.
+A Next.js application that allows users to connect their Solana wallet and transfer SOL to another address.
 
----
+## Project Overview
 
-## Requirements
+This project implements:
 
-- Create a **Next.js** app (latest version recommended).
-- Implement wallet connection (e.g., using `@solana/wallet-adapter`).
-- Enable users to **send SOL** to a specified recipient address.
+- Wallet connection using Solana wallet adapter
+- SOL transfer functionality
+- Transaction validation and notifications
 
----
+## Getting Started
 
-## Functionality Details
+First, install dependencies:
 
-1. **Home Page:**
-   - Display a **"Connect Wallet"** button.
-   - When clicked, open the wallet adapter modal and prompt the user to connect their Solana wallet.
+```bash
+pnpm install
+```
 
-2. **After Connection:**
-   - Show:
-     - An **input field** for the **recipient address**.
-     - An **input field** for the **amount of SOL** to send.
-     - A **"Send SOL"** button to initiate the transfer.
+Then run the development server:
 
-3. **On Transfer:**
-   - Perform a **SOL transfer transaction** to the specified recipient address.
-   - After successful submission, display a **toast notification** with the **transaction signature/hash** and a link to view it on **Solana Explorer**.
+```bash
+pnpm run dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-## Bonus Points (Optional)
+## How to Test the App
 
-- Validate the recipient address format and the amount (must be positive and greater than 0).
-- Show USD value of balance / amount
-- Handle loading and error states gracefully (e.g., disable buttons during operations, show error toasts).
-- Use a UI library like **TailwindCSS**, **Shadcn UI**, or **Chakra UI** for better styling.
-- Ensure mobile responsiveness.
+### Prerequisites
 
----
+1. Install a Solana wallet extension:
 
-## Notes
+   - [Phantom](https://phantom.app/)
+   - [Solflare](https://solflare.com/)
 
-- You may use **Devnet** for transactions.
-- Focus on **code readability**, **component structure**, and **user experience**.
-- Think about basic **error handling** and **form validation** — we'll review attention to detail!
+2. Get DevNet SOL:
+   - Switch your wallet to Devnet in wallet settings
+   - Visit [Solana Faucet](https://faucet.solana.com/) to request SOL
+   - Or use CLI: `solana airdrop 2 YOUR_WALLET_ADDRESS --url devnet`
+
+### Testing Steps
+
+1. **Connect Your Wallet**
+
+   - Click "Connect Wallet" button
+   - Select your wallet from the modal
+   - Approve the connection
+
+2. **Send SOL**
+   - Enter a recipient wallet address
+   - Enter the amount to send
+   - Click "Send SOL"
+   - Approve the transaction in your wallet
+3. **Verify Transaction**
+   - Check the success notification
+   - Click the link to view transaction on Solana Explorer
+   - Verify your wallet balance has updated
+
+## Troubleshooting
+
+- **Wallet Connection Issues**: Ensure wallet extension is up-to-date and set to Devnet
+- **Transaction Failures**: Verify you have enough SOL for transaction plus fees
+- **Balance Not Updating**: Try refreshing the page
+
+## Technologies Used
+
+- Next.js latest version with app router
+- Solana Web3.js
+- Solana Wallet Adapter
+- TailwindCSS v4
+- Shadcn UI
+- framer-motion
+- sonner
+- react-hook-form
+- zod
+- next-themes
+- TypeScript
+
+## Learn More
+
+- [Solana Documentation](https://docs.solana.com/)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Solana Web3.js](https://github.com/solana-foundation/solana-web3.js)
+- [Shadcn UI](https://ui.shadcn.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Zod](https://zod.dev/)
+- [Next Themes](https://github.com/pacocoursey/next-themes)
