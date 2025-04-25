@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: 'Transfer SOL to any address',
 };
 
-export const RootLayout = ({ children }: { children: React.ReactNode }) => {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
@@ -33,6 +33,4 @@ export const RootLayout = ({ children }: { children: React.ReactNode }) => {
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
